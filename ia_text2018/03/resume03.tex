@@ -70,18 +70,65 @@
 \section*{\LARGE{第3講 スイッチの ON/OFF を取得する}}
 \section{本実習の目標}
 \begin{itemize}
+ \item Arduino の Digital Output を用いて LED を光らせる
  \item Arduino の Digital Input を用いてスイッチの ON/OFF を取得する
  \item Arduino の Digital Input とDigital Output を用いてスイッチの ON/OFF に応じてLEDを光らせる
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h!]
+ \begin{minipage}{0.5\columnwidth}
+\section{Digital Output}
+\subsection{LED を点滅させる}
 
-\section{前回の復習}
-前回やった Digital Output の復習をしましょう。
+Digital Output を使って LED を点滅させて
+
+みましょう。
+ \end{minipage}
+ \begin{minipage}{0.5\columnwidth}
+  \centering
+  \includegraphics[width=60mm]{img/kairo2.eps}
+  \caption{回路図}
+ \end{minipage}
+\end{figure}
+
+
+
+\subsubsection*{プログラム}
+\begin{lstlisting}
+import processing.serial.*;
+import cc.arduino.*;
+ 
+Arduino arduino;
+int ledPin = 13; // LED を接続したピンの番号
+ 
+void setup() {
+  arduino = new Arduino(this, Arduino.list()[5], 57600);
+
+  // Arduino のピンモードを設定
+  // ここでは 13 番ピンを Output 用に設定
+  arduino.pinMode(ledPin, Arduino.OUTPUT);
+}
+ 
+void draw() {
+  // Arduino の 13 番ピンを HIGH (5V) に
+  arduino.digitalWrite(ledPin, Arduino.HIGH);
+  delay(500); // 500ミリ秒間待つ
+
+  // Arduino の 13 番ピンを LOW (0V) に
+  arduino.digitalWrite(ledPin, Arduino.LOW);
+  delay(500);
+}
+\end{lstlisting}
+
+\newpage
+
+\subsection{Processingの入力に応じてLEDを点灯させる}
+Processingの画面上でマウスを押すとLEDが点灯するプログラムを作成してみましょう。Arduino側は、Digital Outの13番にLEDを接続しておきます。
 
 \subsection*{mousePressed}
 mousePressed 変数はマウスが押されているか押されていないかによって、それぞれ true と false に値が変わります。
-これを用いると、「マウスが押されているときに何かをする」という動作が実現できます。
+これを用いると、「マウスがクリックされたときに何かをする」という動作が実現できます。
 
 \begin{lstlisting}
  if (mousePressed) {
@@ -91,39 +138,118 @@ mousePressed 変数はマウスが押されているか押されていないか�
  }
 \end{lstlisting}
 
-では、下のプログラムを参考にして前回の内容を思い出しながら、
-マウスが押されている間 LED が点灯する、というプログラムを書いてみましょう。
-
-回路は前回のままで OK です。
-
+\subsubsection*{プログラム}
 \begin{lstlisting}
 import processing.serial.*;
 import cc.arduino.*;
  
 Arduino arduino;
 int ledPin = 13;
+color bgColor = color(0);
  
 void setup() {
+  size(400, 200);
   arduino = new Arduino(this, Arduino.list()[5], 57600);
   arduino.pinMode(ledPin, Arduino.OUTPUT);
 }
  
 void draw() {
   if (mousePressed) {
-    // ここに命令を追加する
-  } else {
-    // ここに命令を追加する
+    arduino.digitalWrite(ledPin, Arduino.HIGH);
+    bgColor = color(255,0,0);
+  }else{
+    arduino.digitalWrite(ledPin, Arduino.LOW);
+    bgColor = color(0);
   }
+  background(bgColor);
 }
 \end{lstlisting}
+画面をクリックすると、LEDが点灯します。
 
-\subsubsection*{ヒント}
-\begin{lstlisting}
- arduino.digitalWrite(n, Arduino.HIGH); // n 番ピンを High (5V) に
- arduino.digitalWrite(n, Arduino.LOW);  // n 番ピンを Low (5V) に
-\end{lstlisting}
+%\subsection*{スイッチを押すと LED が点灯するようにする}
+%スイッチの入力を Processing で取得し、それに基づいて LED を制御しましょう。
+%上 2 つの合わせ技です。
+
+%これで入力と出力の両方が実現できるようになります。
+%次回以降の実習でも入力や出力のための部品が変わるだけで基本的な考え方は同じです。
 
 
+%\subsubsection*{TRY}
+%今回やったことを思い出しながら、回路とプログラムを作成してみましょう。
+
+% \subsubsection*{プログラムを書く}
+% \begin{lstlisting}
+% import processing.serial.*;
+% import cc.arduino.*;
+
+% Arduino arduino;
+% int ledPin = 13;
+% int switchPin = 8;
+ 
+% void setup() {
+%   size(400, 300);
+%   arduino = new Arduino(this, Arduino.list()[0], 57600);
+%   arduino.pinMode(switchPin, Arduino.INPUT);
+%   arduino.pinMode(ledPin, Arduino.OUTPUT);
+% }
+ 
+% void draw() {
+%   if (arduino.digitalRead(switchPin) == Arduino.HIGH) {
+%     background(255, 0, 0);
+%     arduino.digitalWrite(ledPin, Arduino.HIGH);
+%   } else {
+%     background(0, 0, 0);
+%     arduino.digitalWrite(ledPin, Arduino.LOW);
+%   }
+% }
+% \end{lstlisting}
+
+
+%\subsection*{mousePressed}
+%mousePressed 変数はマウスが押されているか押されていないかによって、それぞれ true と false に値が変わります。
+%これを用いると、「マウスが押されているときに何かをする」という動作が実現できます。
+%
+%\begin{lstlisting}
+% if (mousePressed) {
+%   // マウスが押されているときの処理
+% } else {
+%   // マウスが押されていないときの処理
+% }
+%\end{lstlisting}
+%
+%では、下のプログラムを参考にしてマウスが押されている間 LED が点灯する、というプログラムを書いてみましょう。
+%
+%回路は前回のままで OK です。
+%
+%\begin{lstlisting}
+%import processing.serial.*;
+%import cc.arduino.*;
+% 
+%Arduino arduino;
+%int ledPin = 13;
+% 
+%void setup() {
+%  arduino = new Arduino(this, Arduino.list()[5], 57600);
+%  arduino.pinMode(ledPin, Arduino.OUTPUT);
+%}
+% 
+%void draw() {
+%  if (mousePressed) {
+%    // ここに命令を追加する
+%  } else {
+%    // ここに命令を追加する
+%  }
+%}
+%\end{lstlisting}
+%
+%\subsubsection*{ヒント}
+%\begin{lstlisting}
+% arduino.digitalWrite(n, Arduino.HIGH); // n 番ピンを High (5V) に
+% arduino.digitalWrite(n, Arduino.LOW);  // n 番ピンを Low (5V) に
+%\end{lstlisting}
+%
+
+\newpage
 \section{Digital Input}
 ここからが本題です。
 Arduino の Digital Input を用いてスイッチの ON/OFF を取得してみましょう。
@@ -166,7 +292,7 @@ Arduino の Digital Input を用いてスイッチの ON/OFF を取得してみ�
 %  \caption{プルアップ抵抗ON (左) OFF (右)}
 %\end{figure}
 
- 
+
 \subsection{プルダウン抵抗}
  図\ref{fig:pulldown}を見ると、GND側に抵抗が付いています。これをプルダウン抵抗と言います。
  
@@ -198,7 +324,7 @@ Arduino の Digital Input を用いてスイッチの ON/OFF を取得してみ�
  % \caption{プルダウン抵抗ON (左) OFF (右)}
 %\end{figure}
 
-%\newpage
+\newpage
 
 \subsection{回路}
 \begin{figure}[htbp]
@@ -212,6 +338,7 @@ Arduino の Digital Input を用いてスイッチの ON/OFF を取得してみ�
  \end{minipage}
   \caption{プルアップ抵抗 (左) とプルダウン抵抗 (右)}
 \end{figure}
+
 
 \subsection{プログラム}
 \begin{lstlisting}
@@ -251,7 +378,7 @@ Digital Inputと Digital Output を用いてスイッチの ON/OFF に応じてL
 Digital Inputと Digital Output を用いてスイッチを押している間だけ LEDを1秒間隔で点滅させてみましょう。
 
 \subsection*{TRY}
-前回と今回やったことを思い出しながら、回路とプログラムを作成してみましょう。
-
+%前回と今回やったことを思い出しながら、回路とプログラムを作成してみましょう。
+今回やったことを思い出しながら、回路とプログラムを作成してみましょう。
 \end{document}
 

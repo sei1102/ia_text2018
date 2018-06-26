@@ -24,7 +24,7 @@
 %% header and footer
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{2017年度 春学期授業}
+\lhead{2018年度 春学期授業}
 \chead{インタラクティブ・アート実習}
 \rhead{担当教員: 松下 光範}
 \cfoot{\thepage}
@@ -148,10 +148,10 @@ for(int i=0; i<10; i++){
 \end{lstlisting}
 
 \subsection*{回路}
-第2講の Digital Output で作成した LED を光らせる回路と似ています。違いは、出力させるピンがPWMであるかどうかです。接続するピンに注意してください。PWM を用いる場合は、番号の前に ''$\sim$'' が付いているピン ($\sim9$ とか) を用いてください。
+第3講の Digital Output で作成した LED を光らせる回路と似ています。違いは、出力させるピンがPWMであるかどうかです。接続するピンに注意してください。PWM を用いる場合は、番号の前に ''$\sim$'' が付いているピン ($\sim9$ とか) を用いてください。
 \begin{figure}[h!]
  \centering
- \includegraphics[width=0.6\columnwidth]{img/LED_circuit.eps}
+ \includegraphics[width=0.6\columnwidth]{img/AnalogOutput.eps}
  \caption{LEDのフェードインとフェードアウトの回路図}
 \end{figure}
 
@@ -164,7 +164,7 @@ Arduino arduino;
 int ledPin = 9; // LEDが接続されたピン番号
 
 void setup(){
-  arduino = new Arduino(this, "/dev/tty.usbmodem1411", 57600);
+  arduino = new Arduino(this, Arduino.list()[5], 57600);
   arduino.pinMode(ledPin, Arduino.OUTPUT);
 }
 
@@ -220,7 +220,7 @@ void draw(){
 
  void setup() {
    size(256, 256);
-   arduino = new Arduino(this, "/dev/tty.usbmodem1411", 57600);
+   arduino = new Arduino(this, Arduino.list()[5], 57600);
    arduino.pinMode(ledPin, Arduino.OUTPUT);
  }
 
@@ -283,7 +283,7 @@ void draw() {
  \end{minipage}
  \begin{minipage}{0.5\columnwidth}
   \centering
-  \includegraphics[height=60mm]{img/fullColorLedCircuit.eps}
+  \includegraphics[width=90mm]{img/fullColorLED.eps}
   \caption{フルカラーLEDの回路図}
  \end{minipage}
 \end{figure}
@@ -300,7 +300,7 @@ int LED_G = 11;   // LED 緑
 
 void setup() {
   size(256, 256);
-  arduino = new Arduino(this, "/dev/tty.usbmodem1411", 57600);
+  arduino = new Arduino(this, Arduino.list()[5], 57600);
   //LEDのピンを出力に設定する
   arduino.pinMode(LED_R, Arduino.OUTPUT);
   arduino.pinMode(LED_B, Arduino.OUTPUT);

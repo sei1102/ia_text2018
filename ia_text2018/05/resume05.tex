@@ -24,7 +24,7 @@
 %% header and footer
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{2017年度 春学期授業}
+\lhead{2018年度 春学期授業}
 \chead{インタラクティブ・アート実習}
 \rhead{担当教員: 松下 光範}
 \cfoot{\thepage}
@@ -148,11 +148,11 @@ Digital Input を用いたときのような、PINモードの設定は必要あ
 \end{figure}
 
 \section{光センサを使う}
-光センサとは、表面に当たる光の量に従って抵抗値が変化する電子部品です。
+光センサ(図\ref{light})とは、表面に当たる光の量に従って抵抗値が変化する電子部品です。
 周りが暗いと抵抗値が大きくなり、明るいと抵抗値が小さくなります。
 テスターを使って抵抗値の変化を測ってみましょう。
 
-実習で使う光センサは CdSセル (CdS: 硫酸カドミウム) を主成分とするものです。
+実習で使う光センサは CdSセル (CdS: 硫化カドミウム) を主成分とするものです。
 
 \begin{figure}[htbp]
  \begin{minipage}{0.666\columnwidth}
@@ -174,6 +174,7 @@ Digital Input を用いたときのような、PINモードの設定は必要あ
   \centering
   \includegraphics[width=\columnwidth]{img/cds_cell.eps}
   \caption{CdS セル}
+  \label{light}
  \end{minipage}
 \end{figure}
 
@@ -187,7 +188,7 @@ Analog Input を使う場合は前述のように A0 〜 A5 ピンを用いる�
 \subsubsection*{回路}
 \begin{figure}[htbp]
  \centering
- \includegraphics[width=0.4\columnwidth]{img/light_sensor_circuit.eps}
+ \includegraphics[width=0.6\columnwidth]{img/AnalogInput.eps}
  \caption{光センサの回路図}
 \end{figure}
 
@@ -205,7 +206,7 @@ Analog Input を使う場合は前述のように A0 〜 A5 ピンを用いる�
  void setup() {
    size(300, 300);
 
-   arduino = new Arduino(this, "/dev/tty.usbmodem1411");
+   arduino = new Arduino(this,Arduino.list()[3],57600);
    font = loadFont("Serif-48.vlw");
  }
 
@@ -249,7 +250,7 @@ Processingでは、矩形や円などの単純な図形と同様に画像を表�
 \end{lstlisting}
 
 \section{曲げセンサを使う}
-曲げセンサとは、センサ本体を曲げることにより抵抗値が変化するセンサです。
+曲げセンサ(図\ref{flex})とは、センサ本体を曲げることにより抵抗値が変化するセンサです。
 プリント面を外側にした状態で曲げると抵抗値が増加します。
 1つの曲げセンサだけでは、片方向への曲げしか検出できませんが、2つを重ねて用いることによって、両方向の曲げを検出できます。
 
@@ -278,7 +279,7 @@ int sensorPin = 0; // 曲げセンサを A0 番ピンに接続する場合
 void setup() {
   size(500,500);
   
-  arduino = new Arduino(this, "/dev/tty.usbmodem1411");
+  arduino = new Arduino(this,Arduino.list()[3],57600);
   img = loadImage("hogehoge.jpg"); // 使いたい画像ファイルの名前を指定
 }
 
@@ -293,25 +294,47 @@ void draw() {
 
 \newpage
 
-\section{圧力センサを使う}
-圧力センサとは、感圧面に加重することにより抵抗値が変化するセンサです。
+\section{様々なセンサ}
+圧力センサ(図\ref{pressure})は、感圧面に加重することにより抵抗値が変化するセンサです。
 タクトスイッチなどの、ON/OFF を検出するスイッチとは違い、押した強さを検出できます。
 
+
+赤外距離センサ(図\ref{distance})は、赤外線を用いてセンサと物体との距離を測定することができるセンサです。
+(第6講で使用します)
 %回路とプログラムは光センサのときと同様です。
 
-圧力センサも光センサや曲げセンサと同様に使えます。
+%圧力センサも光センサや曲げセンサと同様に使えます。
+圧力センサや赤外距離センサも、光センサや曲げセンサと同様の回路とプログラムで使うことができます。
+
 %すみませんが今回は前で見せるだけにします。
+
+
+この他にも、心拍センサや加速度センサ、温度センサなど様々な種類のセンサがあります。
 
 \begin{figure}[htbp]
  \begin{minipage}{0.5\columnwidth}
   \centering
   \includegraphics[width=\columnwidth]{img/flex_sensor.eps}
   \caption{曲げセンサ}
+  \label{flex}
  \end{minipage}
  \begin{minipage}{0.5\columnwidth}
   \centering
   \includegraphics[width=\columnwidth]{img/pressure_sensor.eps}
   \caption{圧力センサ}
+  \label{pressure}
  \end{minipage}
 \end{figure}
-\end{document}
+
+
+\begin{figure}[htbp]
+ \begin{minipage}{0.5\columnwidth}
+  \centering
+  \includegraphics[width=\columnwidth]{img/DistanceDetector.eps}
+  \caption{赤外距離センサ}
+  \label{distance}
+ \end{minipage}
+ \end{figure}
+ 
+ \end{document}
+ 

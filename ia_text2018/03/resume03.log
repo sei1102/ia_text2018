@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2017.1.19)  23 APR 2018 13:37
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2017.1.19)  24 APR 2018 14:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -182,11 +182,23 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 82.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 82.
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 120.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 120.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 87.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 87.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 87.
+File: img/kairo2.eps Graphic file (type eps)
 
+<img/kairo2.eps>
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 80--93
+[][]$[]$[] []$[]$[] 
+ []
+
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 97.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 97.
 
 Package Fancyhdr Warning: \headheight is too small (8.5359pt): 
  Make it at least 15.49998pt.
@@ -195,18 +207,12 @@ Package Fancyhdr Warning: \headheight is too small (8.5359pt):
 
 [1
 
-]
+] [2]
 File: img/pullup_off.eps Graphic file (type eps)
  <img/pullup_off.eps>
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 149.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 149.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 149.
 File: img/pullup_on.eps Graphic file (type eps)
  <img/pullup_on.eps>
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 146--153
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 272--279
 [][]$[]$[] []$[]$[] 
  []
 
@@ -214,26 +220,27 @@ File: img/pulldown_off.eps Graphic file (type eps)
 <img/pulldown_off.eps>
 File: img/pulldown_on.eps Graphic file (type eps)
  <img/pulldown_on.eps>
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 178--185
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 304--311
 [][]$[]$[] []$[]$[] 
  []
 
+[3]
 File: img/pull_up.eps Graphic file (type eps)
-<img/pull_up.eps>
+ <img/pull_up.eps>
 File: img/pull_down.eps Graphic file (type eps)
  <img/pull_down.eps>
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 205--213
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 331--339
 [][]$[]$[] []$[]$[] 
  []
 
-[2] [3] [4] (./resume03.aux) ) 
+[4] [5] (./resume03.aux) ) 
 Here is how much of TeX's memory you used:
- 2657 strings out of 493693
- 36974 string characters out of 6149787
- 206525 words of memory out of 5000000
- 6206 multiletter control sequences out of 15000+600000
+ 2661 strings out of 493693
+ 37024 string characters out of 6149787
+ 199525 words of memory out of 5000000
+ 6209 multiletter control sequences out of 15000+600000
  15370 words of font info for 61 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  27i,12n,43p,236b,1078s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on resume03.dvi (4 pages, 29876 bytes).
+Output written on resume03.dvi (5 pages, 39312 bytes).

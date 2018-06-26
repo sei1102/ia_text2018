@@ -24,7 +24,7 @@
 %% header and footer
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{2017年度 春学期授業}
+\lhead{2018年度 春学期授業}
 \chead{インタラクティブ・アート実習}
 \rhead{担当教員: 松下 光範}
 \cfoot{\thepage}
@@ -86,28 +86,52 @@
 
 % 赤外線センサの図と配線の説明を入れる
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\columnwidth]{img/ir_sensor.eps}
+  \begin{center}
+   \caption{赤外線センサ}
+  \end{center}
+ \end{figure}
+
+
+
 \begin{itembox}[l]{注意!}
  赤外線センサは、とてもデリケートで配線の向きを間違えただけでも破損してしまいます。
  PC に接続する前に配線が正しいかどうか、もう一度確認すること！
 \end{itembox}
 
-\subsection*{回路}
-\begin{figure}[h!]
- \begin{minipage}{0.5\columnwidth}
+
+
+
+%\subsection*{回路}
+%\begin{figure}[h!]
+% \begin{minipage}{0.5\columnwidth}
+%  \centering
+%  \includegraphics[width=0.7\columnwidth]{img/ir_sensor.eps}
+%  \begin{center}
+%   \textbf{赤外線センサ}
+%  \end{center}
+% \end{minipage}
+% \begin{minipage}{0.5\columnwidth}
+%  \centering
+%  \includegraphics[width=\columnwidth]{img/infrared_proximity_circuit.eps}
+%  \begin{center}
+%   \textbf{赤外線センサを用いた回路図}
+%  \end{center}
+% \end{minipage}
+%\end{figure}
+
+%\section*{回路}
+
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.7\columnwidth]{img/ir_sensor.eps}
+  \includegraphics[width=0.6\columnwidth]{img/kyori_kairo.eps}
   \begin{center}
-   \textbf{赤外線センサ}
+   \caption{赤外線センサを用いた回路図}
   \end{center}
- \end{minipage}
- \begin{minipage}{0.5\columnwidth}
-  \centering
-  \includegraphics[width=\columnwidth]{img/infrared_proximity_circuit.eps}
-  \begin{center}
-   \textbf{赤外線センサを用いた回路図}
-  \end{center}
- \end{minipage}
 \end{figure}
+
 
 
 \subsection*{プログラム}
@@ -129,6 +153,8 @@ map 関数は非常に便利なので覚えておくとよいでしょう。
 
 map 関数は x を範囲 xMin〜xMax から別の範囲 yMin〜yMax へ変換する関数です。
 map 関数を利用して、センサの値を実際の距離の計測値に変換してみましょう。
+
+\newpage
 
 \begin{lstlisting}
  void draw() {
