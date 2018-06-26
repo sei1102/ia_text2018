@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2017.1.19)  17 FEB 2018 17:38
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2017.1.19)  9 APR 2018 18:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -194,25 +194,25 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 85.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 92.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 91.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 92.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 91.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 97.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 96.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 97.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 96.
 File: ./img/eps/arduino.eps Graphic file (type eps)
 
 <./img/eps/arduino.eps>
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 107.
+(Font)              <10.95> on input line 106.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 107.
+(Font)              <8> on input line 106.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 107.
+(Font)              <6> on input line 106.
 File: ./img/eps/breadboard.eps Graphic file (type eps)
  <./img/eps/breadboard.eps>
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 103--113
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 102--112
 [][]$[]$[] []$[]$[] 
  []
 
@@ -220,7 +220,7 @@ File: ./img/eps/jumpwire.eps Graphic file (type eps)
 <./img/eps/jumpwire.eps>
 File: ./img/eps/parts.eps Graphic file (type eps)
  <./img/eps/parts.eps>
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 116--126
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 115--125
 [][]$[]$[] []$[]$[] 
  []
 
@@ -247,57 +247,23 @@ File: ./img/eps/LED.eps Graphic file (type eps)
 File: ./img/eps/mechanism_of_the_breadboard.eps Graphic file (type eps)
  <./img/eps/mechanism_of_the_breadboard.eps>
 \c@nombre=\count102
-File: ./img/eps/circuit01.eps Graphic file (type eps)
+File: ./img/eps/kairo1.eps Graphic file (type eps)
 
-<./img/eps/circuit01.eps>
-File: ./img/eps/sample_circuit.eps Graphic file (type eps)
- <./img/eps/sample_circuit.eps>
-Overfull \hbox (1.89618pt too wide) in paragraph at lines 349--350
- [][] 
- []
-
-
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 341--352
+<./img/eps/kairo1.eps>
+File: ./img/eps/image1.eps Graphic file (type eps)
+ <./img/eps/image1.eps>
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 340--351
 [][]$[]$[] []$[]$[] 
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 355.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 355.
-[6]
-File: ./img/eps/processing_ide.eps Graphic file (type eps)
- <./img/eps/processing_ide.eps>
-File: ./img/eps/image_of_rect_function.eps Graphic file (type eps)
- <./img/eps/image_of_rect_function.eps>
-File: ./img/eps/Processing_img1-1.eps Graphic file (type eps)
-
-<./img/eps/Processing_img1-1.eps>
-File: ./img/eps/example_of_rect_function.eps Graphic file (type eps)
- <./img/eps/example_of_rect_function.eps>
-File: ./img/eps/Processing_img1-6.eps Graphic file (type eps)
-
-<./img/eps/Processing_img1-6.eps>
-File: ./img/eps/Processing_img1-8.eps Graphic file (type eps)
- <./img/eps/Processing_img1-8.eps>
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 401--411
-[][]$[]$[] []$[]$[] 
- []
-
-File: ./img/eps/Processing_img1-4.eps Graphic file (type eps)
-<./img/eps/Processing_img1-4.eps>
-File: ./img/eps/Processing_img1-5.eps Graphic file (type eps)
- <./img/eps/Processing_img1-5.eps>
-File: ./img/eps/Processing_img1-7.eps Graphic file (type eps)
-
-<./img/eps/Processing_img1-7.eps> [7] [8] [9] (./resume01.aux) ) 
+[6] (./resume01.aux) ) 
 Here is how much of TeX's memory you used:
- 2816 strings out of 493693
- 39420 string characters out of 6149787
- 194539 words of memory out of 5000000
- 6334 multiletter control sequences out of 15000+600000
- 17123 words of font info for 68 fonts, out of 8000000 for 9000
+ 2705 strings out of 493693
+ 37949 string characters out of 6149787
+ 134539 words of memory out of 5000000
+ 6240 multiletter control sequences out of 15000+600000
+ 15034 words of font info for 59 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 34i,12n,43p,561b,1078s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,12n,43p,561b,359s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on resume01.dvi (9 pages, 49468 bytes).
+Output written on resume01.dvi (6 pages, 21452 bytes).

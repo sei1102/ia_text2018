@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2017.1.19)  17 FEB 2018 17:39
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2017.1.19)  23 APR 2018 13:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -218,10 +218,10 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 178--185
 [][]$[]$[] []$[]$[] 
  []
 
-File: img/pullup.eps Graphic file (type eps)
-<img/pullup.eps>
-File: img/pulldown.eps Graphic file (type eps)
- <img/pulldown.eps>
+File: img/pull_up.eps Graphic file (type eps)
+<img/pull_up.eps>
+File: img/pull_down.eps Graphic file (type eps)
+ <img/pull_down.eps>
 Overfull \hbox (2.43332pt too wide) in paragraph at lines 205--213
 [][]$[]$[] []$[]$[] 
  []
@@ -229,11 +229,11 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 205--213
 [2] [3] [4] (./resume03.aux) ) 
 Here is how much of TeX's memory you used:
  2657 strings out of 493693
- 36970 string characters out of 6149787
+ 36974 string characters out of 6149787
  206525 words of memory out of 5000000
  6206 multiletter control sequences out of 15000+600000
  15370 words of font info for 61 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  27i,12n,43p,236b,1078s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on resume03.dvi (4 pages, 29880 bytes).
+Output written on resume03.dvi (4 pages, 29876 bytes).
